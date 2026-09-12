@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Vender na Kiwify</title>
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:#07130d;color:#fff}
+.container{max-width:760px;margin:auto;padding:28px 18px}
+.hero{text-align:center;padding:42px 20px 28px}
+.badge{display:inline-block;background:#123d28;color:#54f59a;padding:8px 14px;border-radius:30px;font-size:13px;font-weight:bold}
+h1{font-size:40px;margin:18px 0 10px;line-height:1.05}
+h1 span{color:#38e889} .sub{color:#c9d5ce;font-size:18px;line-height:1.5}
+.card{background:#0d2117;border:1px solid #1d4b31;border-radius:20px;padding:25px;margin:20px 0}
+ul{padding-left:22px;line-height:1.9;color:#dbe8df}
+.price{text-align:center;font-size:38px;font-weight:bold;color:#52ee97;margin:18px 0}
+button{width:100%;border:0;border-radius:13px;padding:17px;background:#35df82;color:#05210f;font-size:18px;font-weight:bold;cursor:pointer}
+button:hover{opacity:.92}
+.pix{display:none;margin-top:18px;background:#06110b;border-radius:14px;padding:16px;text-align:center}
+.pixcode{word-break:break-all;color:#bdeaca;font-size:14px;margin:10px 0}
+.small{font-size:12px;color:#9fb0a6;line-height:1.5;text-align:center}
+h2{margin-top:0}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+  <div class="badge">E-BOOK DIGITAL</div>
+  <h1>Como Vender na <span>Kiwify</span></h1>
+  <p class="sub">Aprenda o passo a passo para começar a vender produtos digitais de forma simples e organizada.</p>
+</section>
+
+<div class="card">
+  <h2>📘 O que você vai aprender</h2>
+  <ul>
+    <li>Como funciona a Kiwify</li>
+    <li>Como cadastrar seu produto</li>
+    <li>O que é checkout</li>
+    <li>Como divulgar seu produto</li>
+    <li>Erros que iniciantes devem evitar</li>
+    <li>Checklist para começar</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>🚀 Tenha o seu e-book</h2>
+  <p>Um guia direto para quem está começando no mercado de produtos digitais.</p>
+  <div class="price">R$ 19,90</div>
+  <button onclick="mostrarPix()">QUERO COMPRAR POR PIX</button>
+  <div class="pix" id="pix">
+    <strong>Pagamento via Pix</strong>
+    <p>Copie a chave abaixo e faça o pagamento de <b>R$ 19,90</b> no seu banco.</p>
+    <div class="pixcode" id="chave">57122239888</div>
+    <button onclick="copiar()">COPIAR CHAVE PIX</button>
+    <p class="small">Após o pagamento, o vendedor deverá confirmar o recebimento e enviar o e-book.</p>
+  </div>
+</div>
+
+<p class="small">Material educativo. A compra não garante resultados financeiros; os resultados dependem de fatores como produto, divulgação, público e dedicação.</p>
+</div>
+
+<script>
+function mostrarPix(){document.getElementById('pix').style.display='block'}
+function copiar(){
+  navigator.clipboard.writeText(document.getElementById('chave').innerText)
+    .then(()=>alert('Chave Pix copiada!'))
+    .catch(()=>alert('Copie a chave Pix manualmente.'))
+}
+</script>
+</body>
+</html>
